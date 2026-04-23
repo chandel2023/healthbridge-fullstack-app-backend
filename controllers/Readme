@@ -1,0 +1,54 @@
+# HealthBridge Backend
+This is the backend of the HealthBridge application, a healthcare platform designed to manage users, appointments, and yoga classes through RESTful APIs.
+
+## Overview
+The backend is built using Node.js and Express.js and follows the MVC (Model-View-Controller) architecture. It provides APIs for user authentication, appointment booking, and yoga class management. MongoDB is used as the database.
+
+## Tech Stack
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JSON Web Token (JWT)
+- bcryptjs
+- dotenv
+- CORS
+
+## Architecture
+The project follows MVC architecture:
+- Models → Define database schema (User, Appointment, YogaClass)
+- Controllers → Handle business logic (auth, booking, classes)
+- Routes → Define API endpoints
+- Middleware → Handle authentication and request validation
+
+## Features
+- User registration and login (JWT based authentication)
+- Secure password hashing using bcrypt
+- Appointment booking system
+- Yoga class management
+- Protected routes using middleware
+- RESTful API design
+
+## API Flow
+1. Client sends request to API
+2. Route handles the request
+3. Controller processes logic
+4. Database interaction using Mongoose
+5. Response returned to client
+
+## Authentication
+- Passwords are hashed using bcrypt before storing
+- JWT tokens are generated during login
+- Protected routes require token verification
+
+## Project Structure
+- controllers/ → Business logic
+- models/ → Database schemas
+- routes/ → API endpoints
+- middlewares/ → Authentication logic
+- index.js → Entry point of server
+
+## Run Locally
+```bash
+npm install
+npm start
